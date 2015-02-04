@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jb.cdjj.email.kknd713.dao.PositionDao">
+	<resultMap type="position" id="positionMap">
+		<id property="id" column="pos_id"/>
+		<result property="name" column="pos_name"/>
+		<association property="department" column="pos_dep_id" 
+			select="com.jb.cdjj.email.kknd713.dao.DepartmentDao.findById"
+		/>
+	</resultMap>
+	
+	<select id="findById" parameterType="int" resultMap="positionMap">
+		select * from position where pos_id = #{value}
+	</select>
+</mapper>

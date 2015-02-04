@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jb.cdjj.email.kknd713.dao.BranchDao">
+	<resultMap type="branch" id="branchMap">
+		<id property="id" column="brc_id"/>
+		<result property="name" column="brc_name"/>
+	</resultMap>
+	
+	<select id="findAll" resultMap="branchMap">
+		select * from branch
+	</select>
+	
+	<select id="findById" parameterType="int" resultMap="branchMap">
+		select * from branch where brc_id = #{value}
+	</select>
+</mapper>

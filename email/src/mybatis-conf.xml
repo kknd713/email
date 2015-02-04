@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.jb.cdjj.email.kknd713.entity.MailUser" alias="mailUser"/>
+		<typeAlias type="com.jb.cdjj.email.kknd713.entity.Branch" alias="branch"/>
+		<typeAlias type="com.jb.cdjj.email.kknd713.entity.Position" alias="position"/>
+		<typeAlias type="com.jb.cdjj.email.kknd713.entity.Department" alias="department"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="com/jb/cdjj/email/kknd713/dao/BranchDaoMapper.xml" />
+		<mapper resource="com/jb/cdjj/email/kknd713/dao/DepartmentDaoMapper.xml" />
+		<mapper resource="com/jb/cdjj/email/kknd713/dao/PositionDaoMapper.xml" />
+		<mapper resource="com/jb/cdjj/email/kknd713/dao/MailUserDaoMapper.xml" />
+	</mappers>
+</configuration>

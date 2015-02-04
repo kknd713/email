@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jb.cdjj.email.kknd713.dao.MailUserDao">
+	<resultMap type="mailUser" id="mailUserMap">
+		<id property="id" column="usr_id"/>
+		<result property="realName" column="usr_real_name"/>
+		<result property="loginName" column="usr_login_name"/>
+		<result property="password" column="usr_password"/>
+		<result property="enabled" column="usr_enabled"/>
+		<result property="activated" column="usr_activated"/>
+		<result property="safeMail" column="usr_safe_mail"/>
+		<result property="safeMailTemp" column="usr_safe_mail_temp"/>
+		<result property="safeMailCode" column="usr_safe_mail_code"/>
+		<result property="safeMailCodeTime" column="usr_safe_mail_code_time"/>
+		<result property="signature" column="usr_signature"/>
+		<association property="position" column="usr_pos_id"
+					select="com.jb.cdjj.email.kknd713.dao.PositionDao.findById" />
+	</resultMap>
+
+	<select id="findAll" resultMap="mailUserMap">
+		select * from Mail_User
+	</select>
+</mapper>

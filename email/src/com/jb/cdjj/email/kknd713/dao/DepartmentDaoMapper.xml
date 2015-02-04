@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jb.cdjj.email.kknd713.dao.DepartmentDao">
+	<resultMap type="department" id="departmentMap">
+		<id property="id" column="dep_id"/>
+		<result property="name" column="dep_name"/>
+		<association property="branch" column="dep_brc_id"
+			select="com.jb.cdjj.email.kknd713.dao.BranchDao.findById"
+		/>
+	</resultMap>
+	
+	<select id="findById" parameterType="int" resultMap="departmentMap">
+		select * from department where dep_id = #{value}
+	</select>
+	
+</mapper>
