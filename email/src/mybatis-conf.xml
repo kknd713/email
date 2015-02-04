@@ -10,9 +10,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="com.jb.cdjj.email.kknd713.entity.Department" alias="department"/>
 	</typeAliases>
 	<mappers>
-		<mapper resource="com/jb/cdjj/email/kknd713/dao/BranchDaoMapper.xml" />
-		<mapper resource="com/jb/cdjj/email/kknd713/dao/DepartmentDaoMapper.xml" />
-		<mapper resource="com/jb/cdjj/email/kknd713/dao/PositionDaoMapper.xml" />
-		<mapper resource="com/jb/cdjj/email/kknd713/dao/MailUserDaoMapper.xml" />
+		<mapper resource="com/jb/cdjj/email/kknd713/dao/mapper/BranchDaoMapper.xml" />
+		<mapper resource="com/jb/cdjj/email/kknd713/dao/mapper/DepartmentDaoMapper.xml" />
+		<mapper resource="com/jb/cdjj/email/kknd713/dao/mapper/PositionDaoMapper.xml" />
+		<mapper resource="com/jb/cdjj/email/kknd713/dao/mapper/MailUserDaoMapper.xml" />
 	</mappers>
 </configuration>
